@@ -279,7 +279,6 @@ bool f144_Writer::writeImpl(FlatbufferMessage const &Message,
 
 void f144_Writer::register_meta_data(hdf5::node::Group const &HDFGroup,
                                      const MetaData::TrackerPtr &Tracker) {
-
   if (MetaData.get_value()) {
     MetaDataMin = MetaData::Value<double>(
         HDFGroup, "minimum_value", MetaData::basicDatasetWriter<double>,
